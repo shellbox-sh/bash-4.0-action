@@ -5,6 +5,7 @@ run:
   image: Dockerfile
   args:
     - ${{ inputs.command }}
+    - ${{ inputs.failOnError }}
 inputs:
   command:
     description: 'Bash command or path to executable or script to run'
