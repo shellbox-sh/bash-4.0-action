@@ -1,0 +1,5 @@
+name: 'Bash 4.0'
+description: 'Run a command using Bash version 4.0'
+run:
+  using: docker
+  image: Dockerfile
