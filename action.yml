@@ -3,3 +3,16 @@ description: 'Run a command using Bash version 4.0'
 run:
   using: docker
   image: Dockerfile
+  args:
+    - ${{ inputs.command }}
+inputs:
+  command:
+    description: 'Bash command or path to executable or script to run'
+    required: true
+outputs:
+  stdout:
+    description: 'The standard output (STDOUT) of the executed command'
+  stderr:
+    description: 'The standard error (STDERR) of the executed command'
+  output:
+    description: 'The combines standard output and error of the executed command'
