@@ -16,3 +16,9 @@ outputs:
     description: 'The standard error (STDERR) of the executed command'
   output:
     description: 'The combines standard output and error of the executed command'
+  exitcode:
+    description: 'The numeric exit code of the executed command (0 indicates success)'
+  passed:
+    description: 'If the executed command exited with 0 exit code, this value will equal "true", otherwise it will equal "false"'
+  failed:
+    description: 'If the executed command exited with 0 exit code, this value will equal "false", otherwise it will equal "true"'
