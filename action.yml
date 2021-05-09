@@ -9,6 +9,10 @@ inputs:
   command:
     description: 'Bash command or path to executable or script to run'
     required: true
+  failOnError:
+    description: 'When set to true (default), the action will return an error if the command returns a non-zero exit code'
+    require: true
+    default: true
 outputs:
   stdout:
     description: 'The standard output (STDOUT) of the executed command'
