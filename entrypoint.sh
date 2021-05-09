@@ -14,7 +14,7 @@ runCommand() {
   local stderrTemporaryFilePath="$( mktemp )"
   stdout="$( eval "$commandString" 2>"$stderrTemporaryFilePath" )"
   exitcode=$?
-  stderr="$(<"$stderrTemporaryFilePath")
+  stderr="$(<"$stderrTemporaryFilePath")"
   rm -f "$stderrTemporaryFilePath"
   local newline=$'\n'
   output="${stdout}${newline}${stderr}"
